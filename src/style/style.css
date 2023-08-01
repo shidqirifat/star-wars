@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+}
+
+.swiper {
+  padding: 16px 16px 70px !important;
+}
+
+.swiper-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 20px !important;
+}
+
+.swiper-pagination-bullet {
+  width: 6px !important;
+  height: 6px !important;
+}
+
+.swiper-pagination-bullet-active {
+  width: 10px !important;
+  height: 10px !important;
+  background-color: rgba(0, 0, 0, 0.7) !important;
+}
+
+.card-hero {
+  border-radius: 12px;
+  height: 480px !important;
+  position: relative;
+  color: white;
+  overflow: hidden;
+}
+
+.image-card-hero {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.shadow-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.65) 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  z-index: 1;
+  transition: 0.3s;
+}
+
+.card-hero:hover .shadow-overlay {
+  opacity: 0.65;
+}
+
+.content-card-hero {
+  position: absolute;
+  z-index: 2;
+  top: 46%;
+  left: 8%;
+}
+
+.content-card-hero h2 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.content-card-hero h4 {
+  font-size: 1.15rem;
+  font-weight: 400;
+}
