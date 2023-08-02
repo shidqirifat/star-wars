@@ -4,9 +4,12 @@ class CardFilm extends HTMLElement {
   constructor() {
     super();
     this.films = [];
+    this.filmElemen = "";
   }
 
-  connectedCallback() {
+  async connectedCallback() {
+    this.render();
+    await this.generateCardWrapper();
     this.render();
   }
 
@@ -26,18 +29,36 @@ class CardFilm extends HTMLElement {
 
   async generateCardWrapper() {
     this.films = await api.getFilms();
-
-    let wrapper = "";
     this.films.forEach((film) => {
-      wrapper += this.generateCard(film);
+      this.filmElemen += this.generateCard(film);
     });
+  }
 
-    return wrapper;
+  generateSkeleton() {
+    let skeleton = "";
+    for (let i = 0; i < 6; i++) {
+      skeleton += `
+        <div class="skeleton-card">
+          <div class="skeleton-content">
+            <div class="skeleton-date"></div>  
+            <div class="skeleton-title"></div>  
+            <div class="skeleton-director"></div>  
+          </div>
+        </div>
+      `;
+    }
+    return skeleton;
   }
 
   async render() {
     this.innerHTML = `
-      <div class="card-film-wrapper">${await this.generateCardWrapper()}</div>
+      <div class="card-film-wrapper">
+        ${
+          this.filmElemen.length === 0
+            ? this.generateSkeleton()
+            : this.filmElemen
+        }
+      </div>
     `;
   }
 }

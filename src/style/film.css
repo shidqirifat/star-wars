@@ -46,3 +46,53 @@
   font-size: 1.2rem;
   font-weight: 400;
 }
+
+/* SKELETON CARD */
+.skeleton-card {
+  position: relative;
+  background-color: rgb(216, 216, 216);
+  border-radius: 12px;
+  aspect-ratio: 3 / 5;
+  animation: skeleton 1s ease-in-out infinite alternate;
+}
+
+.skeleton-content {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  padding: 16px 12px 32px;
+}
+
+.skeleton-date,
+.skeleton-title,
+.skeleton-director {
+  background-color: rgb(194, 194, 194);
+  border-radius: 4px;
+  animation: skeleton 1s ease-in-out infinite alternate;
+}
+
+.skeleton-date {
+  width: 40%;
+  height: 20px;
+  margin-bottom: 0.5rem;
+}
+
+.skeleton-title {
+  width: 80%;
+  height: 32px;
+  margin-bottom: 0.6rem;
+}
+
+.skeleton-director {
+  width: 60%;
+  height: 24px;
+}
+
+@keyframes skeleton {
+  from {
+    opacity: 0.8;
+  }
+  to {
+    opacity: 1;
+  }
+}
