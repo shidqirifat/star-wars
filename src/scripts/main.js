@@ -4,6 +4,7 @@ import 'swiper/css/bundle';
 import 'swiper/css/autoplay';
 import 'swiper/css/pagination';
 import "./component/hero.js";
+import "./component/card.js";
 
 const main = () => {
   document.addEventListener("DOMContentLoaded", async () => {
