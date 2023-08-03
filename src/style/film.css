@@ -1,10 +1,20 @@
+section {
+  padding: 0 16px;
+  margin: 12px auto;
+}
+
+.title-section {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
 .card-film-wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
-  padding: 0 16px;
-  margin: 0 auto;
 }
+
 .card-film {
   aspect-ratio: 3/5;
   border-radius: 12px;

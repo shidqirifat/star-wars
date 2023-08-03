@@ -52,13 +52,16 @@ class CardFilm extends HTMLElement {
 
   async render() {
     this.innerHTML = `
-      <div class="card-film-wrapper">
-        ${
-          this.filmElemen.length === 0
-            ? this.generateSkeleton()
-            : this.filmElemen
-        }
-      </div>
+      <section>
+        <h2 class="title-section">Films</h2>
+        <div class="card-film-wrapper">
+          ${
+            this.filmElemen.length === 0
+              ? this.generateSkeleton()
+              : this.filmElemen
+          }
+        </div>
+      </section>
     `;
   }
 }
