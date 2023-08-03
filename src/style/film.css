@@ -46,6 +46,7 @@ section {
 .card-film .title {
   font-size: 1.7rem;
   font-weight: 600;
+  color: #ffc107;
 }
 .card-film .director {
   font-size: 1.2rem;
