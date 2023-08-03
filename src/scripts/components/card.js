@@ -57,11 +57,7 @@ class CardFilm extends HTMLElement {
       <section>
         <h2 class="title-section">Films</h2>
         <div class="card-film-wrapper">
-          ${
-  this.filmElemen.length === 0
-    ? this.generateSkeleton()
-    : this.filmElemen
-}
+          ${this.filmElemen || this.generateSkeleton()}
         </div>
       </section>
     `;
