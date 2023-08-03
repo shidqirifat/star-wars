@@ -1,4 +1,4 @@
-import { heros } from '../data/star-wars';
+import { heros } from '../datas/star-wars';
 
 class HeroSwiper extends HTMLElement {
   constructor() {

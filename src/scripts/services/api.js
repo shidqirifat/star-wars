@@ -1,4 +1,4 @@
-import { images } from "../data/star-wars";
+import { images } from "../datas/star-wars";
 import axios from "axios";
 
 const BASE_URL = "https://swapi.dev/api";

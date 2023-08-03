@@ -1,6 +1,6 @@
-import "./component/hero.js";
-import swiper from "./component/swiper.js";
-import "./component/card.js";
+import "./components/hero.js";
+import "./components/card.js";
+import swiper from "./components/swiper.js";
 
 const main = () => {
   document.addEventListener("DOMContentLoaded", async () => {
