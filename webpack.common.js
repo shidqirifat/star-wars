@@ -2,7 +2,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = {
   entry: path.resolve(__dirname, 'src/index.js'),
@@ -60,9 +59,6 @@ module.exports = {
           to: path.resolve(__dirname, 'dist'),
         },
       ],
-    }),
-    new BundleAnalyzerPlugin({
-      openAnalyzer: false,
     }),
   ],
 };
