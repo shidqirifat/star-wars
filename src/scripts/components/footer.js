@@ -1,3 +1,5 @@
+import { references } from "../datas/star-wars";
+
 class Footer extends HTMLElement {
   constructor() {
     super();
@@ -7,24 +9,34 @@ class Footer extends HTMLElement {
     this.render();
   }
 
+  generateSeparator() {
+    return `<div class="separator">|</div>`;
+  }
+
+  generateReference({ label, link, textLink }) {
+    return `
+      <div class="content-footer">
+        <h3>${label}</h3>
+        <a href=${link} target="_blank" rel=”noopener noreferrer”>${textLink}</a>
+      </div>
+    `;
+  }
+
+  generateReferenceWrapper() {
+    let wrapper = "";
+    references.forEach((reference, i) => {
+      wrapper += this.generateReference(reference);
+
+      if (i === references.length - 1) return;
+      wrapper += this.generateSeparator();
+    });
+
+    return wrapper;
+  }
+
   async render() {
     this.innerHTML = `
-      <footer>
-        <div class="content-footer">
-          <h3>Created by </h3>
-          <a href="https://shidqirifat-portofolio.vercel.app/" target="_blank" rel=”noopener noreferrer”>Shidqi</a>
-        </div>
-        <div class="separator">|</div>
-        <div class="content-footer">
-          <h3>Asset by </h3>
-          <a href="https://www.starwars.com/" target="_blank" rel=”noopener noreferrer”>Star Wars</a>
-        </div>
-        <div class="separator">|</div>
-        <div class="content-footer">
-          <h3>Data by </h3>
-          <a href="https://swapi.dev/" target="_blank" rel=”noopener noreferrer”>Swapi API</a>
-        </div>
-      </footer>
+      <footer>${this.generateReferenceWrapper()}</footer>
     `;
   }
 }
