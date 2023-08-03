@@ -1,8 +1,4 @@
 class Header extends HTMLElement {
-  constructor() {
-    super();
-  }
-
   connectedCallback() {
     this.render();
   }
@@ -16,4 +12,4 @@ class Header extends HTMLElement {
   }
 }
 
-customElements.define("header-section", Header);
+customElements.define('header-section', Header);

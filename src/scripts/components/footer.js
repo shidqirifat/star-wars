@@ -1,16 +1,12 @@
-import { references } from "../datas/star-wars";
+import { references } from '../datas/star-wars';
 
 class Footer extends HTMLElement {
-  constructor() {
-    super();
-  }
-
   connectedCallback() {
     this.render();
   }
 
   generateSeparator() {
-    return `<div class="separator">|</div>`;
+    return '<div class="separator">|</div>';
   }
 
   generateReference({ label, link, textLink }) {
@@ -23,7 +19,7 @@ class Footer extends HTMLElement {
   }
 
   generateReferenceWrapper() {
-    let wrapper = "";
+    let wrapper = '';
     references.forEach((reference, i) => {
       wrapper += this.generateReference(reference);
 
@@ -41,4 +37,4 @@ class Footer extends HTMLElement {
   }
 }
 
-customElements.define("footer-section", Footer);
+customElements.define('footer-section', Footer);

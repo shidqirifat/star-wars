@@ -1,7 +1,7 @@
-import { images } from "../datas/star-wars";
-import axios from "axios";
+import axios from 'axios';
+import { images } from '../datas/star-wars';
 
-const BASE_URL = "https://swapi.dev/api";
+const BASE_URL = 'https://swapi.dev/api';
 
 const getFilms = async () => {
   const { data } = await axios.get(`${BASE_URL}/films`);

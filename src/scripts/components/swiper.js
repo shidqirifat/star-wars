@@ -1,10 +1,11 @@
-import Swiper from "swiper";
-import { Autoplay, Pagination } from "swiper/modules";
-import "swiper/css/bundle";
-import "swiper/css/autoplay";
-import "swiper/css/pagination";
+/* eslint-disable import/no-unresolved */
+import Swiper from 'swiper';
+import { Autoplay, Pagination } from 'swiper/modules';
+import 'swiper/css/bundle';
+import 'swiper/css/autoplay';
+import 'swiper/css/pagination';
 
-const swiper = new Swiper(".swiper", {
+const swiper = new Swiper('.swiper', {
   speed: 400,
   loop: true,
   autoplay: {
@@ -14,8 +15,8 @@ const swiper = new Swiper(".swiper", {
   },
   observer: true,
   pagination: {
-    el: ".swiper-pagination",
-    type: "bullets",
+    el: '.swiper-pagination',
+    type: 'bullets',
   },
   breakpoints: {
     220: {

@@ -1,5 +1,5 @@
-import "regenerator-runtime";
-import "./style/style.css";
-import main from "./scripts/main";
+import 'regenerator-runtime';
+import './style/style.css';
+import main from './scripts/main';
 
 main();

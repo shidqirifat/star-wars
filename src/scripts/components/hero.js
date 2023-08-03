@@ -1,10 +1,6 @@
 import { heros } from '../datas/star-wars';
 
 class HeroSwiper extends HTMLElement {
-  constructor() {
-    super();
-  }
-
   connectedCallback() {
     this.render();
   }
@@ -13,10 +9,12 @@ class HeroSwiper extends HTMLElement {
     return `
       box-shadow: rgba(${color}, 0.25) 0px 36px 56px -8px,
         rgba(${color}, 0.3) 0px 18px 36px -18px;
-    `
+    `;
   }
 
-  generateCard({ image, title, description, color }) {
+  generateCard({
+    image, title, description, color,
+  }) {
     return `
       <div class="card-hero swiper-slide" style="${this.generateShadowCard(color)}">
         <div class="shadow-overlay"></div>
@@ -30,7 +28,7 @@ class HeroSwiper extends HTMLElement {
           <h4>${description}</h4>
         </div>
       </div>
-    `
+    `;
   }
 
   generateCardWrapper() {
@@ -49,8 +47,8 @@ class HeroSwiper extends HTMLElement {
           ${this.generateCardWrapper()}
         </div>
         <div class="swiper-pagination"></div>
-      </div>`
+      </div>`;
   }
 }
 
-customElements.define("hero-swiper", HeroSwiper);
+customElements.define('hero-swiper', HeroSwiper);

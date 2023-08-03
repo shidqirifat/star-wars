@@ -1,10 +1,10 @@
-import { api } from "../services/api";
+import { api } from '../services/api';
 
 class CardFilm extends HTMLElement {
   constructor() {
     super();
     this.films = [];
-    this.filmElemen = "";
+    this.filmElemen = '';
   }
 
   async connectedCallback() {
@@ -13,7 +13,9 @@ class CardFilm extends HTMLElement {
     this.render();
   }
 
-  generateCard({ releaseDate, title, director, image }) {
+  generateCard({
+    releaseDate, title, director, image,
+  }) {
     return `
       <div class="card-film">
         <div class="shadow-overlay"></div>
@@ -35,8 +37,8 @@ class CardFilm extends HTMLElement {
   }
 
   generateSkeleton() {
-    let skeleton = "";
-    for (let i = 0; i < 6; i++) {
+    let skeleton = '';
+    for (let i = 0; i < 6; i += 1) {
       skeleton += `
         <div class="skeleton-card">
           <div class="skeleton-content">
@@ -56,14 +58,14 @@ class CardFilm extends HTMLElement {
         <h2 class="title-section">Films</h2>
         <div class="card-film-wrapper">
           ${
-            this.filmElemen.length === 0
-              ? this.generateSkeleton()
-              : this.filmElemen
-          }
+  this.filmElemen.length === 0
+    ? this.generateSkeleton()
+    : this.filmElemen
+}
         </div>
       </section>
     `;
   }
 }
 
-customElements.define("card-film", CardFilm);
+customElements.define('card-film', CardFilm);
