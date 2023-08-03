@@ -1,3 +1,4 @@
+import "./components/header.js";
 import "./components/hero.js";
 import "./components/card.js";
 import swiper from "./components/swiper.js";
